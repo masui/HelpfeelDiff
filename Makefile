@@ -1,9 +1,11 @@
-all:
+# 公開されているHelpfeelデータのタイトルを取得
+
+bank:
 	wget -q -O - https://helpfeel.com/hokugin-faq/data/helpdata.json | jq . | grep 'title"' > hokugin.txt
 	wget -q -O - https://help.iyobank.co.jp/data/helpdata.json | jq . | grep 'title"' > iyobank.txt
 	wget -q -O - https://helpfeel.com/sendaibank/data/helpdata.json | jq . | grep 'title"' > sendaibank.txt
 
-machi:
+towns:
 	wget -q -O - https://helpfeel.com/yokosuka-city-faq/data/helpdata.json | jq . | grep 'title"' > yokosuka.txt
 
 cable:
