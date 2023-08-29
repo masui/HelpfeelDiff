@@ -1,4 +1,7 @@
+#
 # 公開されているHelpfeelデータのタイトルを取得
+# hikizan.orgで比較する
+#
 
 bank:
 	wget -q -O - https://helpfeel.com/hokugin-faq/data/helpdata.json | jq -r '.faqs[].title' > hokugin.txt
